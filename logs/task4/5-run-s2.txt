@@ -1,0 +1,2 @@
+echo "Container 7c0727876f8c has joined the Serf cluster with the following IP a
+ddress: 172.18.0.4" >> /vagrant/ha/config/haproxy.cfg.hb
