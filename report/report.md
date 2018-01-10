@@ -21,7 +21,6 @@ In this lab, we are going to get familiar with dynamic scaling with Docker. It i
 1. Screenshot of the stats page of HAProxy at this point:
 
     ![](https://i.imgur.com/h86NYuH.png)
-	![Image](/images/task1_haproxy_stats.png)
     
 2. URL of our repository for this lab: https://github.com/Thuy-My/Teaching-HEIGVD-AIT-2016-Labo-Docker
 
