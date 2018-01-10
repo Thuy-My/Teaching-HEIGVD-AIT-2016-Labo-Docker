@@ -1,7 +1,7 @@
 # AIT Lab 04
 
 ### Introduction
-In this lab, we are going to get familiar with Docker.
+In this lab, we are going to get familiar with dynamic scaling with Docker. It is based on the load balancing lab.
 
 ### Task 0
 [M1]: No, the current solution would not suit for a production environment. The main problems are the manual launching of the containers. 
@@ -43,13 +43,13 @@ In this lab, we are going to get familiar with Docker.
 
 ### Task 2
 
-1. See the `logs` folder in the repository.
+1. See the `logs/task2` folder in the repository.
 
 2. We can manage the web app nodes dynamically as opposed to statically as in the initial condition by using Serf. Thanks to Serf, the load balancer will know when a node goes down or goes up and will be able to adapt itself.
     The web app nodes can therefore be managed in a more dynamic fashion.
 
 3. Serf is a tool aimed for cluster membership, failure detection and orchestration. It uses a gossip protocol, which means that every messages are brodcasted to the entire cluster. By consequence every time a web app node will come up or go down, Serf will alert every other component of the cluster. More importantly the message will reach the load balancer who will in turn adapt itself to the new situation by redirecting incoming requests to the new web app in the case where a new one pops up or by redirecting them to only the remaining ones in the case where one web app dies. 
-    Consul. (Zookeeper, Etcd? apparently do not do services discovery)
+    Consul.
 
 ### Task 3
 
