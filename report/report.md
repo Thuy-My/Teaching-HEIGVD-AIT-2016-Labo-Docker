@@ -8,13 +8,13 @@ In this lab, we are going to get familiar with dynamic scaling with Docker. It i
 
 [M2]: We would have to modify the configuration file so that a third web app container will be launched along with the first two. More precisely the Docker image will be instancied a third time to create the third container.
 
-[M3]: . 
+[M3]: The problem with this current solution is that the configuration and the launching of the containers are all to be manually done. A better solution would be to find a way to automate everything so that it does not need any admin to ensure that the whole system works well. 
 
 [M4]: We could let the load balancer determine the number of web application nodes to launch depending on the incoming traffic.
 
-[M5]: .
+[M5]: It is not possible with our current solution to run additional management processes as we are following the general principle of Docker, namely "one process per container". We would have to add a supervisor to be able to run several processes inside one container.
 
-[M6]: To add more web server nodes, we would have to add more lines like the ones beginning with sed. It is not dynamic as we would have to do that manually for each web server nodes we want to add. A solution would be to give the number of webapp to create and make it create them dynamically?
+[M6]: To add more web server nodes, we would have to add more lines like the ones beginning with sed. It is not dynamic as we would have to do that manually for each web server nodes we want to add. A solution would be to give the number of webapp to create everytime some change happens and make it create them dynamically?
 
 *Deliverables:*
 
@@ -80,4 +80,4 @@ In this lab, we are going to get familiar with dynamic scaling with Docker. It i
 1. Screenshot of the HAProxy stats page:
     ![](https://i.imgur.com/HrOn6xg.png)
 
-2. .
+2. This final solution is scalable, which is definitely better than the original one, but there are still a few improvements possible. First of all, only one load balancer is available which means that on the day it fails, the entire system will be down. It could be good idea to set up another load balancer that could take over in that case, so that the system stays alive and nothing will be noticed by the users. It would also be nice to automate the launching (or shutting down) of the webapps as it would quickly get overwhelming for an admin to take care of a fast changing system.
