@@ -49,7 +49,7 @@ In this lab, we are going to get familiar with dynamic scaling with Docker. It i
     The web app nodes can therefore be managed in a more dynamic fashion.
 
 3. Serf is a tool aimed for cluster membership, failure detection and orchestration. It uses a gossip protocol, which means that every messages are brodcasted to the entire cluster. By consequence every time a web app node will come up or go down, Serf will alert every other component of the cluster. More importantly the message will reach the load balancer who will in turn adapt itself to the new situation by redirecting incoming requests to the new web app in the case where a new one pops up or by redirecting them to only the remaining ones in the case where one web app dies. 
-    Consul.
+   Another solution would be to use Consul, as it is a distributed service discovery.
 
 ### Task 3
 
