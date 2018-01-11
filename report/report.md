@@ -59,13 +59,18 @@ In this lab, we are going to get familiar with dynamic scaling with Docker. It i
 
 ### Task 4
 
-1. .
+1. A Docker image is built up from a series of layers. Each layer represents an instruction in the image’s Dockerfile.
+The layers are stacked on top of each other and each layer is kept in memory. As soon as we add a new instruction 
+the reconstruction of the image will take some time because there is no layer corresponding to this instruction and 
+docker creates it.
+To optimize a Dockerfile we need to group the commands such as RUN command 1 && command 2 && command 3.
 
-2. .
+2. We propose to use this command in the dockerfile RUN apt-get update & apt-get install xz-utils to reuse as 
+   much as possible what we have done.
 
 3. See the `logs/task4` folder in the repository.
 
-4. .
+4. We notice that all three files have the same structure, the only difference being the container ID and the IP address. Everytime a new container is ran, the whole haproxy.cfg is replaced. It would have been better if every output was being concatenated instead, that way we can see clearly which containers are in the cluster.
 
 ### Task 5
 
