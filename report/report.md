@@ -14,7 +14,7 @@ In this lab, we are going to get familiar with dynamic scaling with Docker. It i
 
 [M5]: It is not possible with our current solution to run additional management processes as we are following the general principle of Docker, namely "one process per container". We would have to add a supervisor to be able to run several processes inside one container.
 
-[M6]: To add more web server nodes, we would have to add more lines like the ones beginning with sed. It is not dynamic as we would have to do that manually for each web server nodes we want to add. A solution would be to give the number of webapp to create everytime some change happens and make it create them dynamically?
+[M6]: To add more web server nodes, we would have to add more lines like the ones beginning with sed. It is not dynamic as we would have to do that manually for each web server nodes we want to add. A solution would be to give the number of webapp to create everytime some change happens and make it create them dynamically.
 
 *Deliverables:*
 
