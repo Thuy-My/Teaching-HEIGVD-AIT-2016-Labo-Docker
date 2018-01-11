@@ -4,7 +4,7 @@
 In this lab, we are going to get familiar with dynamic scaling with Docker. It is based on the load balancing lab.
 
 ### Task 0
-[M1]: No, the current solution would not suit for a production environment. The main problems are the manual launching of the containers. 
+[M1]: No, the current solution would not be suited for a production environment. The main problems are the manual launching of the containers. It would be a working system but the manual launching would not make it suitable for a production environment.
 
 [M2]: We would have to modify the configuration file so that a third web app container will be launched along with the first two. More precisely the Docker image will be instancied a third time to create the third container.
 
